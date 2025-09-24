@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Register Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="form-header">
+                <h2>Create Account</h2>
+                <p>Please fill in your information to register</p>
+            </div>
+            
+            <form action="register.php" method="POST">
+    
+                <div class="input-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                    <small class="error" id="fullnameError"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <small class="error" id="emailError"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <small class="error" id="usernameError"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="password-strength">
+                        <div class="strength-bar">
+                            <div class="strength-fill"></div>
+                        </div>
+                        <small id="strengthText"></small>
+                    </div>
+                    <small class="error" id="passwordError"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                    <small class="error" id="confirmPasswordError"></small>
+                </div>
+
+                <fieldset class="radio-group">
+                    <legend>Gender</legend>
+                    <div class="radio-options">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="Male" required>
+                            <span class="radio-custom"></span>
+                            Male
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="Female">
+                            <span class="radio-custom"></span>
+                            Female
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="checkbox-group">
+                    <legend>Hobbies</legend>
+                    <div class="checkbox-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="hobbies[]" value="Reading">
+                            <span class="checkbox-custom"></span>
+                            Reading
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="hobbies[]" value="Sports">
+                            <span class="checkbox-custom"></span>
+                            Sports
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="hobbies[]" value="Music">
+                            <span class="checkbox-custom"></span>
+                            Music
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="input-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select your country</option>
+                        <option value="USA">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="India">India</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Create Account</span>
+                    <span class="btn-loader"></span>
+                </button>
+
+                <div class="form-footer">
+                    <p>Already have an account? <a href="login.html" class="link">Login here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+John Doe|john@example.com|johndoe|mypassword|Male|Reading,Music|USA
+Jane Smith|jane@example.com|janesmith|123456|Female|Sports|UK

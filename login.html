@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="form-header">
+                <h2>Welcome Back</h2>
+                <p>Please login to your account</p>
+            </div>
+
+            <div class="alert error-alert">
+                <span class="alert-icon">⚠️</span>
+                <span class="alert-message"></span>
+                <button class="alert-close">&times;</button>
+            </div>
+
+            <form action="login.php" method="POST">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" required>
+                        <button type="button" class="password-toggle">
+                            <span class="eye-icon">👁️</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="remember">
+                        <span class="checkbox-custom"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-link">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    <span class="btn-text">Login</span>
+                    <span class="btn-loader"></span>
+                </button>
+
+                <div class="divider">
+                    <span>Or continue with</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn google-btn">
+                        <img src="google-icon.png" alt="" class="social-icon">
+                        Google
+                    </button>
+                    <button type="button" class="social-btn facebook-btn">
+                        <img src="facebook-icon.png" alt="" class="social-icon">
+                        Facebook
+                    </button>
+                </div>
+
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="register.html" class="link">Register here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
